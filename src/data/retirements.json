@@ -1,0 +1,2479 @@
+{
+  "version": 1,
+  "updated": "2026-10-08",
+  "windowStart": "2025-07-01",
+  "scope": "Language models (chat, reasoning, completions, code, search, computer-use and deep-research IDs, and OpenAI fine-tune families) with a shutdown date on or after 1 July 2025, from four official pages: OpenAI's deprecations page, Anthropic's model deprecations doc, the Gemini API deprecations page and Vertex AI's model versions page. Audio, realtime, speech, transcription, image, video, embedding and moderation models are left out.",
+  "priceBasis": "US dollars per million tokens at the standard tier, text input, shortest context tier, as listed on the provider's pricing page on the date seen. A ratio is the replacement's price divided by the retiring model's; it ignores differences in how many tokens each model uses.",
+  "providers": {
+    "openai": {
+      "name": "OpenAI",
+      "platform": "OpenAI API",
+      "deprecations": "https://developers.openai.com/api/docs/deprecations",
+      "pricing": "https://developers.openai.com/api/docs/pricing",
+      "seen": "2026-10-08"
+    },
+    "anthropic": {
+      "name": "Anthropic",
+      "platform": "Claude API",
+      "deprecations": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "pricing": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "seen": "2026-10-08"
+    },
+    "gemini-api": {
+      "name": "Google",
+      "platform": "Gemini API",
+      "deprecations": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "pricing": "https://ai.google.dev/gemini-api/docs/pricing",
+      "seen": "2026-10-08"
+    },
+    "vertex-ai": {
+      "name": "Google Cloud",
+      "platform": "Vertex AI (Gemini Enterprise Agent Platform)",
+      "deprecations": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
+      "pricing": "https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing",
+      "seen": "2026-10-08"
+    }
+  },
+  "entries": [
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-04-14",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-4.1"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-4.5-preview",
+      "shutdown": "2025-07-14",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-01-21",
+      "shutdownIsEarliest": false,
+      "replacements": ["claude-opus-4-8"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "a non-default temperature, top_p or top_k returns a 400 error",
+          "text": "Claude 4.7 and later models return a 400 error when temperature, top_p or top_k is set to a non-default value. Anthropic's Python SDK v1.0 and later removes these parameters, so passing them raises a TypeError. Omit them and guide the model with the prompt.",
+          "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+        },
+        {
+          "short": "a newer tokenizer counts about 30% more tokens for the same text",
+          "text": "Claude 4.7 and later models use a newer tokenizer that produces approximately 30% more tokens for the same text, so the same prompt can cost more than the per-token ratio suggests. Measure on your own prompts.",
+          "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+        }
+      ],
+      "notes": [
+        "Dates apply to the Claude API, Claude Platform on AWS and Microsoft Foundry. Amazon Bedrock and Google Cloud set their own retirement schedules."
+      ],
+      "seen": "2026-10-08",
+      "provider": "anthropic",
+      "id": "claude-2.0",
+      "shutdown": "2025-07-21",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "priceNote": "Not listed on Anthropic's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-01-21",
+      "shutdownIsEarliest": false,
+      "replacements": ["claude-opus-4-8"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "a non-default temperature, top_p or top_k returns a 400 error",
+          "text": "Claude 4.7 and later models return a 400 error when temperature, top_p or top_k is set to a non-default value. Anthropic's Python SDK v1.0 and later removes these parameters, so passing them raises a TypeError. Omit them and guide the model with the prompt.",
+          "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+        },
+        {
+          "short": "a newer tokenizer counts about 30% more tokens for the same text",
+          "text": "Claude 4.7 and later models use a newer tokenizer that produces approximately 30% more tokens for the same text, so the same prompt can cost more than the per-token ratio suggests. Measure on your own prompts.",
+          "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+        }
+      ],
+      "notes": [
+        "Dates apply to the Claude API, Claude Platform on AWS and Microsoft Foundry. Amazon Bedrock and Google Cloud set their own retirement schedules."
+      ],
+      "seen": "2026-10-08",
+      "provider": "anthropic",
+      "id": "claude-2.1",
+      "shutdown": "2025-07-21",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "priceNote": "Not listed on Anthropic's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-01-21",
+      "shutdownIsEarliest": false,
+      "replacements": ["claude-sonnet-4-6"],
+      "prices": [],
+      "breaks": [],
+      "notes": [
+        "Dates apply to the Claude API, Claude Platform on AWS and Microsoft Foundry. Amazon Bedrock and Google Cloud set their own retirement schedules."
+      ],
+      "seen": "2026-10-08",
+      "provider": "anthropic",
+      "id": "claude-3-sonnet-20240229",
+      "shutdown": "2025-07-21",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "priceNote": "Not listed on Anthropic's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-04-28",
+      "shutdownIsEarliest": false,
+      "replacements": ["o3"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "o1-preview",
+      "shutdown": "2025-07-28",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": false,
+      "replacements": ["gemini-2.5-flash-lite"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "vertex-ai",
+      "id": "gemini-1.5-flash-002",
+      "shutdown": "2025-09-24",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
+      "priceNote": "The retiring model is not listed on the Agent Platform pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": false,
+      "replacements": ["gemini-2.5-flash"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "vertex-ai",
+      "id": "gemini-1.5-pro-002",
+      "shutdown": "2025-09-24",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
+      "priceNote": "The retiring model is not listed on the Agent Platform pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-04-28",
+      "shutdownIsEarliest": false,
+      "replacements": ["o4-mini"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "o1-mini",
+      "shutdown": "2025-10-27",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-08-13",
+      "shutdownIsEarliest": false,
+      "replacements": ["claude-sonnet-4-6"],
+      "prices": [],
+      "breaks": [],
+      "notes": [
+        "Dates apply to the Claude API, Claude Platform on AWS and Microsoft Foundry. Amazon Bedrock and Google Cloud set their own retirement schedules."
+      ],
+      "seen": "2026-10-08",
+      "provider": "anthropic",
+      "id": "claude-3-5-sonnet-20240620",
+      "shutdown": "2025-10-28",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "priceNote": "Not listed on Anthropic's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-08-13",
+      "shutdownIsEarliest": false,
+      "replacements": ["claude-sonnet-4-6"],
+      "prices": [],
+      "breaks": [],
+      "notes": [
+        "Dates apply to the Claude API, Claude Platform on AWS and Microsoft Foundry. Amazon Bedrock and Google Cloud set their own retirement schedules."
+      ],
+      "seen": "2026-10-08",
+      "provider": "anthropic",
+      "id": "claude-3-5-sonnet-20241022",
+      "shutdown": "2025-10-28",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "priceNote": "Not listed on Anthropic's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-3.6-flash"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "a temperature below 1.0 may cause looping",
+          "text": "For Gemini 3 models Google recommends keeping temperature at its default of 1.0; setting it below 1.0 may cause looping or degraded performance.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        },
+        {
+          "short": "sending thinking_level and thinking_budget together returns a 400 error",
+          "text": "Gemini 3 uses thinking_level; sending thinking_level and the legacy thinking_budget in the same request returns a 400 error.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        }
+      ],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-2.5-flash-preview-05-20",
+      "shutdown": "2025-11-18",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "priceNote": "The retiring model is not listed on the Gemini API pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-3.1-pro-preview"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "a temperature below 1.0 may cause looping",
+          "text": "For Gemini 3 models Google recommends keeping temperature at its default of 1.0; setting it below 1.0 may cause looping or degraded performance.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        },
+        {
+          "short": "sending thinking_level and thinking_budget together returns a 400 error",
+          "text": "Gemini 3 uses thinking_level; sending thinking_level and the legacy thinking_budget in the same request returns a 400 error.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        }
+      ],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-2.5-pro-preview-03-25",
+      "shutdown": "2025-12-02",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "priceNote": "The retiring model is not listed on the Gemini API pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-3.1-pro-preview"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "a temperature below 1.0 may cause looping",
+          "text": "For Gemini 3 models Google recommends keeping temperature at its default of 1.0; setting it below 1.0 may cause looping or degraded performance.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        },
+        {
+          "short": "sending thinking_level and thinking_budget together returns a 400 error",
+          "text": "Gemini 3 uses thinking_level; sending thinking_level and the legacy thinking_budget in the same request returns a 400 error.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        }
+      ],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-2.5-pro-preview-05-06",
+      "shutdown": "2025-12-02",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "priceNote": "The retiring model is not listed on the Gemini API pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-3.1-pro-preview"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "a temperature below 1.0 may cause looping",
+          "text": "For Gemini 3 models Google recommends keeping temperature at its default of 1.0; setting it below 1.0 may cause looping or degraded performance.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        },
+        {
+          "short": "sending thinking_level and thinking_budget together returns a 400 error",
+          "text": "Gemini 3 uses thinking_level; sending thinking_level and the legacy thinking_budget in the same request returns a 400 error.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        }
+      ],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-2.5-pro-preview-06-05",
+      "shutdown": "2025-12-02",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "priceNote": "The retiring model is not listed on the Gemini API pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-2.5-flash-lite"],
+      "prices": [],
+      "breaks": [],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-2.0-flash-lite-preview",
+      "shutdown": "2025-12-09",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "priceNote": "The retiring model is not listed on the Gemini API pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-2.5-flash-lite"],
+      "prices": [],
+      "breaks": [],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-2.0-flash-lite-preview-02-05",
+      "shutdown": "2025-12-09",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "priceNote": "The retiring model is not listed on the Gemini API pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-06-30",
+      "shutdownIsEarliest": false,
+      "replacements": ["claude-opus-4-8"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "a non-default temperature, top_p or top_k returns a 400 error",
+          "text": "Claude 4.7 and later models return a 400 error when temperature, top_p or top_k is set to a non-default value. Anthropic's Python SDK v1.0 and later removes these parameters, so passing them raises a TypeError. Omit them and guide the model with the prompt.",
+          "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+        },
+        {
+          "short": "a newer tokenizer counts about 30% more tokens for the same text",
+          "text": "Claude 4.7 and later models use a newer tokenizer that produces approximately 30% more tokens for the same text, so the same prompt can cost more than the per-token ratio suggests. Measure on your own prompts.",
+          "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+        }
+      ],
+      "notes": [
+        "Dates apply to the Claude API, Claude Platform on AWS and Microsoft Foundry. Amazon Bedrock and Google Cloud set their own retirement schedules."
+      ],
+      "seen": "2026-10-08",
+      "provider": "anthropic",
+      "id": "claude-3-opus-20240229",
+      "shutdown": "2026-01-05",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "priceNote": "Not listed on Anthropic's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-11-17",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5-codex-mini"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "the legacy local shell tool is no longer supported",
+          "text": "The legacy local shell tool, available only with codex-mini-latest, is no longer supported; OpenAI points to its latest shell tool.",
+          "source": "https://developers.openai.com/api/docs/deprecations"
+        }
+      ],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "codex-mini-latest",
+      "shutdown": "2026-02-12",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-3.6-flash"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "a temperature below 1.0 may cause looping",
+          "text": "For Gemini 3 models Google recommends keeping temperature at its default of 1.0; setting it below 1.0 may cause looping or degraded performance.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        },
+        {
+          "short": "sending thinking_level and thinking_budget together returns a 400 error",
+          "text": "Gemini 3 uses thinking_level; sending thinking_level and the legacy thinking_budget in the same request returns a 400 error.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        }
+      ],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-2.5-flash-preview-09-25",
+      "shutdown": "2026-02-17",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "priceNote": "The retiring model is not listed on the Gemini API pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-11-18",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.1-chat-latest"],
+      "prices": [],
+      "breaks": [],
+      "notes": [
+        "The replacement OpenAI named, gpt-5.1-chat-latest, was itself shut down on 23 July 2026."
+      ],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "chatgpt-4o-latest",
+      "shutdown": "2026-02-17",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-12-19",
+      "shutdownIsEarliest": false,
+      "replacements": ["claude-haiku-4-5-20251001"],
+      "prices": [
+        {
+          "replacement": "claude-haiku-4-5-20251001",
+          "retiring": {
+            "input": 0.8,
+            "output": 4
+          },
+          "replacementPrice": {
+            "input": 1,
+            "output": 5
+          },
+          "ratio": {
+            "input": 1.25,
+            "output": 1.25
+          }
+        }
+      ],
+      "breaks": [],
+      "notes": [
+        "Dates apply to the Claude API, Claude Platform on AWS and Microsoft Foundry. Amazon Bedrock and Google Cloud set their own retirement schedules."
+      ],
+      "seen": "2026-10-08",
+      "provider": "anthropic",
+      "id": "claude-3-5-haiku-20241022",
+      "shutdown": "2026-02-19",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "pricingSource": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-10-28",
+      "shutdownIsEarliest": false,
+      "replacements": ["claude-sonnet-4-6"],
+      "prices": [],
+      "breaks": [],
+      "notes": [
+        "Dates apply to the Claude API, Claude Platform on AWS and Microsoft Foundry. Amazon Bedrock and Google Cloud set their own retirement schedules."
+      ],
+      "seen": "2026-10-08",
+      "provider": "anthropic",
+      "id": "claude-3-7-sonnet-20250219",
+      "shutdown": "2026-02-19",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "priceNote": "Not listed on Anthropic's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-3.1-pro-preview"],
+      "prices": [],
+      "breaks": [],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-3-pro-preview",
+      "shutdown": "2026-03-09",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "priceNote": "The retiring model is not listed on the Gemini API pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": ["gpt-4-turbo-preview", "gpt-4-turbo-preview-completions"],
+      "kind": "model",
+      "announced": "2025-09-26",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5", "gpt-4.1"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-4-0125-preview",
+      "shutdown": "2026-03-26",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-09-26",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5", "gpt-4.1"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-4-0314",
+      "shutdown": "2026-03-26",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-3.1-flash-lite"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "a temperature below 1.0 may cause looping",
+          "text": "For Gemini 3 models Google recommends keeping temperature at its default of 1.0; setting it below 1.0 may cause looping or degraded performance.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        },
+        {
+          "short": "sending thinking_level and thinking_budget together returns a 400 error",
+          "text": "Gemini 3 uses thinking_level; sending thinking_level and the legacy thinking_budget in the same request returns a 400 error.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        }
+      ],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-2.5-flash-lite-preview-09-2025",
+      "shutdown": "2026-03-31",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "priceNote": "The retiring model is not listed on the Gemini API pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-02-19",
+      "shutdownIsEarliest": false,
+      "replacements": ["claude-haiku-4-5-20251001"],
+      "prices": [],
+      "breaks": [],
+      "notes": [
+        "Dates apply to the Claude API, Claude Platform on AWS and Microsoft Foundry. Amazon Bedrock and Google Cloud set their own retirement schedules."
+      ],
+      "seen": "2026-10-08",
+      "provider": "anthropic",
+      "id": "claude-3-haiku-20240307",
+      "shutdown": "2026-04-20",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "priceNote": "Not listed on Anthropic's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-3.1-flash-lite"],
+      "prices": [],
+      "breaks": [],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-3.1-flash-lite-preview",
+      "shutdown": "2026-05-25",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "priceNote": "The retiring model is not listed on the Gemini API pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-3.6-flash"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "a temperature below 1.0 may cause looping",
+          "text": "For Gemini 3 models Google recommends keeping temperature at its default of 1.0; setting it below 1.0 may cause looping or degraded performance.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        },
+        {
+          "short": "sending thinking_level and thinking_budget together returns a 400 error",
+          "text": "Gemini 3 uses thinking_level; sending thinking_level and the legacy thinking_budget in the same request returns a 400 error.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        }
+      ],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-2.0-flash",
+      "shutdown": "2026-06-01",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "priceNote": "The retiring model is not listed on the Gemini API pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-3.6-flash"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "a temperature below 1.0 may cause looping",
+          "text": "For Gemini 3 models Google recommends keeping temperature at its default of 1.0; setting it below 1.0 may cause looping or degraded performance.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        },
+        {
+          "short": "sending thinking_level and thinking_budget together returns a 400 error",
+          "text": "Gemini 3 uses thinking_level; sending thinking_level and the legacy thinking_budget in the same request returns a 400 error.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        }
+      ],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-2.0-flash-001",
+      "shutdown": "2026-06-01",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "priceNote": "The retiring model is not listed on the Gemini API pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-3.1-flash-lite"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "a temperature below 1.0 may cause looping",
+          "text": "For Gemini 3 models Google recommends keeping temperature at its default of 1.0; setting it below 1.0 may cause looping or degraded performance.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        },
+        {
+          "short": "sending thinking_level and thinking_budget together returns a 400 error",
+          "text": "Gemini 3 uses thinking_level; sending thinking_level and the legacy thinking_budget in the same request returns a 400 error.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        }
+      ],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-2.0-flash-lite",
+      "shutdown": "2026-06-01",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "priceNote": "The retiring model is not listed on the Gemini API pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-3.1-flash-lite"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "a temperature below 1.0 may cause looping",
+          "text": "For Gemini 3 models Google recommends keeping temperature at its default of 1.0; setting it below 1.0 may cause looping or degraded performance.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        },
+        {
+          "short": "sending thinking_level and thinking_budget together returns a 400 error",
+          "text": "Gemini 3 uses thinking_level; sending thinking_level and the legacy thinking_budget in the same request returns a 400 error.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        }
+      ],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-2.0-flash-lite-001",
+      "shutdown": "2026-06-01",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "priceNote": "The retiring model is not listed on the Gemini API pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": false,
+      "replacements": ["gemini-3.1-flash-lite"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "temperature, top_p and top_k are deprecated and should be removed",
+          "text": "For Gemini 3.x models, temperature, top_p and top_k are deprecated: Google says to remove them from every request and to use a system instruction for determinism.",
+          "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate"
+        },
+        {
+          "short": "thinking_budget gives way to thinking_level",
+          "text": "thinking_budget is deprecated on Gemini 3.x in favour of thinking_level.",
+          "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate"
+        },
+        {
+          "short": "a function response that does not match its call returns an empty answer, not an error",
+          "text": "Every FunctionResponse must carry the id and name of its FunctionCall, exactly one per call. Google says the API does not yet return an error for a mismatch; the model returns an empty response with finish_reason STOP instead.",
+          "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate"
+        }
+      ],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "vertex-ai",
+      "id": "gemini-2.0-flash",
+      "shutdown": "2026-06-01",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
+      "priceNote": "The retiring model is not listed on the Agent Platform pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": false,
+      "replacements": ["gemini-3.1-flash-lite"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "temperature, top_p and top_k are deprecated and should be removed",
+          "text": "For Gemini 3.x models, temperature, top_p and top_k are deprecated: Google says to remove them from every request and to use a system instruction for determinism.",
+          "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate"
+        },
+        {
+          "short": "thinking_budget gives way to thinking_level",
+          "text": "thinking_budget is deprecated on Gemini 3.x in favour of thinking_level.",
+          "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate"
+        },
+        {
+          "short": "a function response that does not match its call returns an empty answer, not an error",
+          "text": "Every FunctionResponse must carry the id and name of its FunctionCall, exactly one per call. Google says the API does not yet return an error for a mismatch; the model returns an empty response with finish_reason STOP instead.",
+          "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate"
+        }
+      ],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "vertex-ai",
+      "id": "gemini-2.0-flash-lite",
+      "shutdown": "2026-06-01",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
+      "priceNote": "The retiring model is not listed on the Agent Platform pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-04-14",
+      "shutdownIsEarliest": false,
+      "replacements": ["claude-opus-4-8"],
+      "prices": [
+        {
+          "replacement": "claude-opus-4-8",
+          "retiring": {
+            "input": 15,
+            "output": 75
+          },
+          "replacementPrice": {
+            "input": 5,
+            "output": 25
+          },
+          "ratio": {
+            "input": 0.333,
+            "output": 0.333
+          }
+        }
+      ],
+      "breaks": [
+        {
+          "short": "a non-default temperature, top_p or top_k returns a 400 error",
+          "text": "Claude 4.7 and later models return a 400 error when temperature, top_p or top_k is set to a non-default value. Anthropic's Python SDK v1.0 and later removes these parameters, so passing them raises a TypeError. Omit them and guide the model with the prompt.",
+          "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+        },
+        {
+          "short": "a newer tokenizer counts about 30% more tokens for the same text",
+          "text": "Claude 4.7 and later models use a newer tokenizer that produces approximately 30% more tokens for the same text, so the same prompt can cost more than the per-token ratio suggests. Measure on your own prompts.",
+          "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+        }
+      ],
+      "notes": [
+        "Dates apply to the Claude API, Claude Platform on AWS and Microsoft Foundry. Amazon Bedrock and Google Cloud set their own retirement schedules."
+      ],
+      "seen": "2026-10-08",
+      "provider": "anthropic",
+      "id": "claude-opus-4-20250514",
+      "shutdown": "2026-06-15",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "pricingSource": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-04-14",
+      "shutdownIsEarliest": false,
+      "replacements": ["claude-sonnet-4-6"],
+      "prices": [
+        {
+          "replacement": "claude-sonnet-4-6",
+          "retiring": {
+            "input": 3,
+            "output": 15
+          },
+          "replacementPrice": {
+            "input": 3,
+            "output": 15
+          },
+          "ratio": {
+            "input": 1.0,
+            "output": 1.0
+          }
+        }
+      ],
+      "breaks": [],
+      "notes": [
+        "Dates apply to the Claude API, Claude Platform on AWS and Microsoft Foundry. Amazon Bedrock and Google Cloud set their own retirement schedules."
+      ],
+      "seen": "2026-10-08",
+      "provider": "anthropic",
+      "id": "claude-sonnet-4-20250514",
+      "shutdown": "2026-06-15",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "pricingSource": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": ["computer-use-preview"],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-terra"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "computer-use-preview-2025-03-11",
+      "shutdown": "2026-07-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-terra"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-4o-mini-search-preview-2025-03-11",
+      "shutdown": "2026-07-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-terra"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-4o-search-preview-2025-03-11",
+      "shutdown": "2026-07-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5-chat-latest",
+      "shutdown": "2026-07-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5-codex",
+      "shutdown": "2026-07-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5.1-chat-latest",
+      "shutdown": "2026-07-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5.1-codex",
+      "shutdown": "2026-07-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5.1-codex-max",
+      "shutdown": "2026-07-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-terra"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5.1-codex-mini",
+      "shutdown": "2026-07-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5.2-codex",
+      "shutdown": "2026-07-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": ["o3-deep-research"],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "o3-deep-research-2025-06-26",
+      "shutdown": "2026-07-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": ["o4-mini-deep-research"],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "o4-mini-deep-research-2025-06-26",
+      "shutdown": "2026-07-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-3.8-flash"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "a temperature below 1.0 may cause looping",
+          "text": "For Gemini 3 models Google recommends keeping temperature at its default of 1.0; setting it below 1.0 may cause looping or degraded performance.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        },
+        {
+          "short": "sending thinking_level and thinking_budget together returns a 400 error",
+          "text": "Gemini 3 uses thinking_level; sending thinking_level and the legacy thinking_budget in the same request returns a 400 error.",
+          "source": "https://ai.google.dev/gemini-api/docs/gemini-3"
+        }
+      ],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-2.5-computer-use-preview-10-2025",
+      "shutdown": "2026-07-28",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "priceNote": "The retiring model is not listed on the Gemini API pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": ["claude-opus-4-1"],
+      "kind": "model",
+      "announced": "2026-06-05",
+      "shutdownIsEarliest": false,
+      "replacements": ["claude-opus-4-8"],
+      "prices": [
+        {
+          "replacement": "claude-opus-4-8",
+          "retiring": {
+            "input": 15,
+            "output": 75
+          },
+          "replacementPrice": {
+            "input": 5,
+            "output": 25
+          },
+          "ratio": {
+            "input": 0.333,
+            "output": 0.333
+          }
+        }
+      ],
+      "breaks": [
+        {
+          "short": "a non-default temperature, top_p or top_k returns a 400 error",
+          "text": "Claude 4.7 and later models return a 400 error when temperature, top_p or top_k is set to a non-default value. Anthropic's Python SDK v1.0 and later removes these parameters, so passing them raises a TypeError. Omit them and guide the model with the prompt.",
+          "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+        },
+        {
+          "short": "a newer tokenizer counts about 30% more tokens for the same text",
+          "text": "Claude 4.7 and later models use a newer tokenizer that produces approximately 30% more tokens for the same text, so the same prompt can cost more than the per-token ratio suggests. Measure on your own prompts.",
+          "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+        }
+      ],
+      "notes": [
+        "Dates apply to the Claude API, Claude Platform on AWS and Microsoft Foundry. Amazon Bedrock and Google Cloud set their own retirement schedules."
+      ],
+      "seen": "2026-10-08",
+      "provider": "anthropic",
+      "id": "claude-opus-4-1-20250805",
+      "shutdown": "2026-08-05",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "pricingSource": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricingSeen": "2026-10-08",
+      "aliasSource": "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-05-08",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5.2-chat-latest",
+      "shutdown": "2026-08-10",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-05-08",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5.3-chat-latest",
+      "shutdown": "2026-08-10",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-09-26",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-terra"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-terra",
+          "retiring": {
+            "input": 0.4,
+            "output": 0.4
+          },
+          "replacementPrice": {
+            "input": 2,
+            "output": 12
+          },
+          "ratio": {
+            "input": 5.0,
+            "output": 30.0
+          }
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "babbage-002",
+      "shutdown": "2026-09-28",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-09-26",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-terra"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-terra",
+          "retiring": {
+            "input": 2,
+            "output": 2
+          },
+          "replacementPrice": {
+            "input": 2,
+            "output": 12
+          },
+          "ratio": {
+            "input": 1.0,
+            "output": 6.0
+          }
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "davinci-002",
+      "shutdown": "2026-09-28",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-09-26",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-terra"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-terra",
+          "retiring": {
+            "input": 1,
+            "output": 2
+          },
+          "replacementPrice": {
+            "input": 2,
+            "output": 12
+          },
+          "ratio": {
+            "input": 2.0,
+            "output": 6.0
+          }
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-3.5-turbo-1106",
+      "shutdown": "2026-09-28",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2025-09-26",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-terra"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-terra",
+          "retiring": {
+            "input": 1.5,
+            "output": 2
+          },
+          "replacementPrice": {
+            "input": 2,
+            "output": 12
+          },
+          "ratio": {
+            "input": 1.33,
+            "output": 6.0
+          }
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-3.5-turbo-instruct",
+      "shutdown": "2026-09-28",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-09-11",
+      "shutdownIsEarliest": false,
+      "replacements": [],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5.4-cyber",
+      "shutdown": "2026-10-01",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "OpenAI names no specific replacement model, so no ratio is given.",
+      "replacementNote": "The most capable cyber model available to you."
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": false,
+      "replacements": ["gemini-3.8-flash", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite"],
+      "prices": [
+        {
+          "replacement": "gemini-3.8-flash",
+          "retiring": {
+            "input": 0.3,
+            "output": 2.5
+          },
+          "replacementPrice": {
+            "input": 0.75,
+            "output": 3.75
+          },
+          "ratio": {
+            "input": 2.5,
+            "output": 1.5
+          },
+          "until": "2026-12-31"
+        },
+        {
+          "replacement": "gemini-3.8-flash",
+          "retiring": {
+            "input": 0.3,
+            "output": 2.5
+          },
+          "replacementPrice": {
+            "input": 1.5,
+            "output": 7.5
+          },
+          "ratio": {
+            "input": 5.0,
+            "output": 3.0
+          },
+          "from": "2027-01-01"
+        },
+        {
+          "replacement": "gemini-3.5-flash-lite",
+          "retiring": {
+            "input": 0.3,
+            "output": 2.5
+          },
+          "replacementPrice": {
+            "input": 0.3,
+            "output": 2.5
+          },
+          "ratio": {
+            "input": 1.0,
+            "output": 1.0
+          }
+        },
+        {
+          "replacement": "gemini-3.1-flash-lite",
+          "retiring": {
+            "input": 0.3,
+            "output": 2.5
+          },
+          "replacementPrice": {
+            "input": 0.25,
+            "output": 1.5
+          },
+          "ratio": {
+            "input": 0.833,
+            "output": 0.6
+          }
+        }
+      ],
+      "breaks": [
+        {
+          "short": "temperature, top_p and top_k are deprecated and should be removed",
+          "text": "For Gemini 3.x models, temperature, top_p and top_k are deprecated: Google says to remove them from every request and to use a system instruction for determinism.",
+          "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate"
+        },
+        {
+          "short": "thinking_budget gives way to thinking_level",
+          "text": "thinking_budget is deprecated on Gemini 3.x in favour of thinking_level.",
+          "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate"
+        },
+        {
+          "short": "a function response that does not match its call returns an empty answer, not an error",
+          "text": "Every FunctionResponse must carry the id and name of its FunctionCall, exactly one per call. Google says the API does not yet return an error for a mismatch; the model returns an empty response with finish_reason STOP instead.",
+          "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate"
+        }
+      ],
+      "notes": [
+        "On the Gemini API (ai.google.dev) the same model ID had no shutdown date announced when checked on 8 October 2026; Google limits 2.5 access there to projects that used it before. This date is for Vertex AI, now Gemini Enterprise Agent Platform.",
+        "Google says retirement dates on this page may be extended but will not be moved earlier."
+      ],
+      "seen": "2026-10-08",
+      "provider": "vertex-ai",
+      "id": "gemini-2.5-flash",
+      "shutdown": "2026-10-20",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
+      "pricingSource": "https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": false,
+      "replacements": ["gemini-3.8-flash", "gemini-3.1-flash-lite", "Gemma 4"],
+      "prices": [
+        {
+          "replacement": "gemini-3.8-flash",
+          "retiring": {
+            "input": 0.1,
+            "output": 0.4
+          },
+          "replacementPrice": {
+            "input": 0.75,
+            "output": 3.75
+          },
+          "ratio": {
+            "input": 7.5,
+            "output": 9.38
+          },
+          "until": "2026-12-31"
+        },
+        {
+          "replacement": "gemini-3.8-flash",
+          "retiring": {
+            "input": 0.1,
+            "output": 0.4
+          },
+          "replacementPrice": {
+            "input": 1.5,
+            "output": 7.5
+          },
+          "ratio": {
+            "input": 15.0,
+            "output": 18.8
+          },
+          "from": "2027-01-01"
+        },
+        {
+          "replacement": "gemini-3.1-flash-lite",
+          "retiring": {
+            "input": 0.1,
+            "output": 0.4
+          },
+          "replacementPrice": {
+            "input": 0.25,
+            "output": 1.5
+          },
+          "ratio": {
+            "input": 2.5,
+            "output": 3.75
+          }
+        }
+      ],
+      "breaks": [
+        {
+          "short": "temperature, top_p and top_k are deprecated and should be removed",
+          "text": "For Gemini 3.x models, temperature, top_p and top_k are deprecated: Google says to remove them from every request and to use a system instruction for determinism.",
+          "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate"
+        },
+        {
+          "short": "thinking_budget gives way to thinking_level",
+          "text": "thinking_budget is deprecated on Gemini 3.x in favour of thinking_level.",
+          "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate"
+        },
+        {
+          "short": "a function response that does not match its call returns an empty answer, not an error",
+          "text": "Every FunctionResponse must carry the id and name of its FunctionCall, exactly one per call. Google says the API does not yet return an error for a mismatch; the model returns an empty response with finish_reason STOP instead.",
+          "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate"
+        }
+      ],
+      "notes": [
+        "On the Gemini API (ai.google.dev) the same model ID had no shutdown date announced when checked on 8 October 2026; Google limits 2.5 access there to projects that used it before. This date is for Vertex AI, now Gemini Enterprise Agent Platform.",
+        "Google says retirement dates on this page may be extended but will not be moved earlier."
+      ],
+      "seen": "2026-10-08",
+      "provider": "vertex-ai",
+      "id": "gemini-2.5-flash-lite",
+      "shutdown": "2026-10-20",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
+      "pricingSource": "https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": false,
+      "replacements": ["gemini-3.8-flash", "gemini-3.5-flash"],
+      "prices": [
+        {
+          "replacement": "gemini-3.8-flash",
+          "retiring": {
+            "input": 1.25,
+            "output": 10
+          },
+          "replacementPrice": {
+            "input": 0.75,
+            "output": 3.75
+          },
+          "ratio": {
+            "input": 0.6,
+            "output": 0.375
+          },
+          "until": "2026-12-31"
+        },
+        {
+          "replacement": "gemini-3.8-flash",
+          "retiring": {
+            "input": 1.25,
+            "output": 10
+          },
+          "replacementPrice": {
+            "input": 1.5,
+            "output": 7.5
+          },
+          "ratio": {
+            "input": 1.2,
+            "output": 0.75
+          },
+          "from": "2027-01-01"
+        },
+        {
+          "replacement": "gemini-3.5-flash",
+          "retiring": {
+            "input": 1.25,
+            "output": 10
+          },
+          "replacementPrice": {
+            "input": 1.5,
+            "output": 9
+          },
+          "ratio": {
+            "input": 1.2,
+            "output": 0.9
+          }
+        }
+      ],
+      "breaks": [
+        {
+          "short": "temperature, top_p and top_k are deprecated and should be removed",
+          "text": "For Gemini 3.x models, temperature, top_p and top_k are deprecated: Google says to remove them from every request and to use a system instruction for determinism.",
+          "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate"
+        },
+        {
+          "short": "thinking_budget gives way to thinking_level",
+          "text": "thinking_budget is deprecated on Gemini 3.x in favour of thinking_level.",
+          "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate"
+        },
+        {
+          "short": "a function response that does not match its call returns an empty answer, not an error",
+          "text": "Every FunctionResponse must carry the id and name of its FunctionCall, exactly one per call. Google says the API does not yet return an error for a mismatch; the model returns an empty response with finish_reason STOP instead.",
+          "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/migrate"
+        }
+      ],
+      "notes": [
+        "On the Gemini API (ai.google.dev) the same model ID had no shutdown date announced when checked on 8 October 2026; Google limits 2.5 access there to projects that used it before. This date is for Vertex AI, now Gemini Enterprise Agent Platform.",
+        "Google says retirement dates on this page may be extended but will not be moved earlier."
+      ],
+      "seen": "2026-10-08",
+      "provider": "vertex-ai",
+      "id": "gemini-2.5-pro",
+      "shutdown": "2026-10-20",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
+      "pricingSource": "https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "fine-tune",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-terra"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "ft-babbage-002",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "A fine-tune's replacement is a base model you would fine-tune again or prompt instead, so a per-token ratio would compare unlike things; none is given.",
+      "finetunePrefixes": ["ft:babbage-002:"]
+    },
+    {
+      "aliases": [],
+      "kind": "fine-tune",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-terra"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "ft-davinci-002",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "A fine-tune's replacement is a base model you would fine-tune again or prompt instead, so a per-token ratio would compare unlike things; none is given.",
+      "finetunePrefixes": ["ft:davinci-002:"]
+    },
+    {
+      "aliases": [],
+      "kind": "fine-tune",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-terra"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "ft-gpt-3.5-turbo",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "A fine-tune's replacement is a base model you would fine-tune again or prompt instead, so a per-token ratio would compare unlike things; none is given.",
+      "finetunePrefixes": ["ft:gpt-3.5-turbo:", "ft:gpt-3.5-turbo-"]
+    },
+    {
+      "aliases": [],
+      "kind": "fine-tune",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "ft-gpt-4",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "A fine-tune's replacement is a base model you would fine-tune again or prompt instead, so a per-token ratio would compare unlike things; none is given.",
+      "finetunePrefixes": ["ft:gpt-4:", "ft:gpt-4-0613:"]
+    },
+    {
+      "aliases": [],
+      "kind": "fine-tune",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-luna"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "ft-gpt-4.1-nano-2025-04-14",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "A fine-tune's replacement is a base model you would fine-tune again or prompt instead, so a per-token ratio would compare unlike things; none is given.",
+      "finetunePrefixes": ["ft:gpt-4.1-nano-2025-04-14:"]
+    },
+    {
+      "aliases": [],
+      "kind": "fine-tune",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-terra"],
+      "prices": [],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "ft-o4-mini-2025-04-16",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "A fine-tune's replacement is a base model you would fine-tune again or prompt instead, so a per-token ratio would compare unlike things; none is given.",
+      "finetunePrefixes": ["ft:o4-mini-2025-04-16:"]
+    },
+    {
+      "aliases": ["gpt-3.5-turbo", "gpt-3.5-turbo-completions"],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-terra"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-terra",
+          "retiring": {
+            "input": 0.5,
+            "output": 1.5
+          },
+          "replacementPrice": {
+            "input": 2,
+            "output": 12
+          },
+          "ratio": {
+            "input": 4.0,
+            "output": 8.0
+          }
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-3.5-turbo-0125",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": ["gpt-4", "gpt-4-0613-completions", "gpt-4-completions"],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-sol",
+          "retiring": {
+            "input": 30,
+            "output": 60
+          },
+          "replacementPrice": {
+            "input": 4,
+            "output": 20
+          },
+          "ratio": {
+            "input": 0.133,
+            "output": 0.333
+          },
+          "note": "OpenAI lists gpt-5.6-sol's $4 / $20 as promotional pricing, available at least through 21 November 2026 (its model page, read 8 October 2026)."
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-4-0613",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [],
+      "breaks": [],
+      "notes": [
+        "OpenAI's page also lists gpt-4-1106-preview under the shutdown of 26 March 2026 (announced 26 September 2025); this page uses the later announcement of 22 April 2026, which gives 23 October 2026."
+      ],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-4-1106-preview",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "Not listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given."
+    },
+    {
+      "aliases": ["gpt-4-turbo-2024-04-09", "gpt-4-turbo-completions"],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-sol",
+          "retiring": {
+            "input": 10,
+            "output": 30
+          },
+          "replacementPrice": {
+            "input": 4,
+            "output": 20
+          },
+          "ratio": {
+            "input": 0.4,
+            "output": 0.667
+          },
+          "note": "OpenAI lists gpt-5.6-sol's $4 / $20 as promotional pricing, available at least through 21 November 2026 (its model page, read 8 October 2026)."
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-4-turbo",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": ["gpt-4.1-nano-2025-04-14"],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-luna"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-luna",
+          "retiring": {
+            "input": 0.1,
+            "output": 0.4
+          },
+          "replacementPrice": {
+            "input": 0.2,
+            "output": 1.2
+          },
+          "ratio": {
+            "input": 2.0,
+            "output": 3.0
+          }
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-4.1-nano",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-sol",
+          "retiring": {
+            "input": 5,
+            "output": 15
+          },
+          "replacementPrice": {
+            "input": 4,
+            "output": 20
+          },
+          "ratio": {
+            "input": 0.8,
+            "output": 1.33
+          },
+          "note": "OpenAI lists gpt-5.6-sol's $4 / $20 as promotional pricing, available at least through 21 November 2026 (its model page, read 8 October 2026)."
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-4o-2024-05-13",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": ["o1"],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-sol",
+          "retiring": {
+            "input": 15,
+            "output": 60
+          },
+          "replacementPrice": {
+            "input": 4,
+            "output": 20
+          },
+          "ratio": {
+            "input": 0.267,
+            "output": 0.333
+          },
+          "note": "OpenAI lists gpt-5.6-sol's $4 / $20 as promotional pricing, available at least through 21 November 2026 (its model page, read 8 October 2026)."
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "o1-2024-12-17",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": ["o1-pro"],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "the replacement needs reasoning.mode set to pro",
+          "text": "OpenAI's replacement is gpt-5.6-sol with reasoning.mode set to pro, not the default mode.",
+          "source": "https://developers.openai.com/api/docs/deprecations"
+        }
+      ],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "o1-pro-2025-03-19",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "No price for gpt-5.6-sol with reasoning.mode pro was listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given.",
+      "replacementNote": "reasoning.mode: pro"
+    },
+    {
+      "aliases": ["o3-mini"],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-sol",
+          "retiring": {
+            "input": 1.1,
+            "output": 4.4
+          },
+          "replacementPrice": {
+            "input": 4,
+            "output": 20
+          },
+          "ratio": {
+            "input": 3.64,
+            "output": 4.55
+          },
+          "note": "OpenAI lists gpt-5.6-sol's $4 / $20 as promotional pricing, available at least through 21 November 2026 (its model page, read 8 October 2026)."
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "o3-mini-2025-01-31",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": ["o4-mini"],
+      "kind": "model",
+      "announced": "2026-04-22",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-terra"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-terra",
+          "retiring": {
+            "input": 1.1,
+            "output": 4.4
+          },
+          "replacementPrice": {
+            "input": 2,
+            "output": 12
+          },
+          "ratio": {
+            "input": 1.82,
+            "output": 2.73
+          }
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "o4-mini-2025-04-16",
+      "shutdown": "2026-10-23",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": false,
+      "replacements": ["gemini-3.8-flash"],
+      "prices": [
+        {
+          "replacement": "gemini-3.8-flash",
+          "retiring": {
+            "input": 0.75,
+            "output": 3.75
+          },
+          "replacementPrice": {
+            "input": 0.75,
+            "output": 3.75
+          },
+          "ratio": {
+            "input": 1.0,
+            "output": 1.0
+          },
+          "note": "Agent Platform lists both models at $0.75 / $3.75 through 31 December 2026 and $1.50 / $7.50 from 1 January 2027."
+        }
+      ],
+      "breaks": [],
+      "notes": [
+        "A short-term availability model: Google posts a fixed retirement date at least 45 days ahead.",
+        "On the Gemini API (ai.google.dev) the same model ID had no shutdown date announced when checked on 8 October 2026."
+      ],
+      "seen": "2026-10-08",
+      "provider": "vertex-ai",
+      "id": "gemini-3.6-flash",
+      "shutdown": "2026-11-19",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
+      "pricingSource": "https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": ["claude-sonnet-4-5"],
+      "kind": "model",
+      "announced": "2026-09-30",
+      "shutdownIsEarliest": false,
+      "replacements": ["claude-sonnet-5-5"],
+      "prices": [
+        {
+          "replacement": "claude-sonnet-5-5",
+          "retiring": {
+            "input": 3,
+            "output": 15
+          },
+          "replacementPrice": {
+            "input": 2,
+            "output": 10
+          },
+          "ratio": {
+            "input": 0.667,
+            "output": 0.667
+          }
+        }
+      ],
+      "breaks": [
+        {
+          "short": "a non-default temperature, top_p or top_k returns a 400 error",
+          "text": "Claude 4.7 and later models return a 400 error when temperature, top_p or top_k is set to a non-default value. Anthropic's Python SDK v1.0 and later removes these parameters, so passing them raises a TypeError. Omit them and guide the model with the prompt.",
+          "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+        },
+        {
+          "short": "a newer tokenizer counts about 30% more tokens for the same text",
+          "text": "Claude 4.7 and later models use a newer tokenizer that produces approximately 30% more tokens for the same text, so the same prompt can cost more than the per-token ratio suggests. Measure on your own prompts.",
+          "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+        }
+      ],
+      "notes": [
+        "Dates apply to the Claude API, Claude Platform on AWS and Microsoft Foundry. Amazon Bedrock and Google Cloud set their own retirement schedules."
+      ],
+      "seen": "2026-10-08",
+      "provider": "anthropic",
+      "id": "claude-sonnet-4-5-20250929",
+      "shutdown": "2026-11-30",
+      "source": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "pricingSource": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricingSeen": "2026-10-08",
+      "aliasSource": "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions"
+    },
+    {
+      "aliases": ["gpt-5"],
+      "kind": "model",
+      "announced": "2026-06-11",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-sol",
+          "retiring": {
+            "input": 1.25,
+            "output": 10
+          },
+          "replacementPrice": {
+            "input": 4,
+            "output": 20
+          },
+          "ratio": {
+            "input": 3.2,
+            "output": 2.0
+          },
+          "note": "OpenAI lists gpt-5.6-sol's $4 / $20 as promotional pricing, available at least through 21 November 2026 (its model page, read 8 October 2026)."
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5-2025-08-07",
+      "shutdown": "2026-12-11",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08",
+      "aliasSource": "https://developers.openai.com/api/docs/models/gpt-5"
+    },
+    {
+      "aliases": ["gpt-5-mini"],
+      "kind": "model",
+      "announced": "2026-06-11",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-terra"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-terra",
+          "retiring": {
+            "input": 0.25,
+            "output": 2
+          },
+          "replacementPrice": {
+            "input": 2,
+            "output": 12
+          },
+          "ratio": {
+            "input": 8.0,
+            "output": 6.0
+          }
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5-mini-2025-08-07",
+      "shutdown": "2026-12-11",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08",
+      "aliasSource": "https://developers.openai.com/api/docs/models/gpt-5-mini"
+    },
+    {
+      "aliases": ["gpt-5-nano"],
+      "kind": "model",
+      "announced": "2026-06-11",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-luna"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-luna",
+          "retiring": {
+            "input": 0.05,
+            "output": 0.4
+          },
+          "replacementPrice": {
+            "input": 0.2,
+            "output": 1.2
+          },
+          "ratio": {
+            "input": 4.0,
+            "output": 3.0
+          }
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5-nano-2025-08-07",
+      "shutdown": "2026-12-11",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08",
+      "aliasSource": "https://developers.openai.com/api/docs/models/gpt-5-nano"
+    },
+    {
+      "aliases": ["gpt-5-pro"],
+      "kind": "model",
+      "announced": "2026-06-11",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "the replacement needs reasoning.mode set to pro",
+          "text": "OpenAI's replacement is gpt-5.6-sol with reasoning.mode set to pro, not the default mode.",
+          "source": "https://developers.openai.com/api/docs/deprecations"
+        }
+      ],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5-pro-2025-10-06",
+      "shutdown": "2026-12-11",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "No price for gpt-5.6-sol with reasoning.mode pro was listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given.",
+      "aliasSource": "https://developers.openai.com/api/docs/models/gpt-5-pro",
+      "replacementNote": "reasoning.mode: pro"
+    },
+    {
+      "aliases": ["o3"],
+      "kind": "model",
+      "announced": "2026-06-11",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [
+        {
+          "replacement": "gpt-5.6-sol",
+          "retiring": {
+            "input": 2,
+            "output": 8
+          },
+          "replacementPrice": {
+            "input": 4,
+            "output": 20
+          },
+          "ratio": {
+            "input": 2.0,
+            "output": 2.5
+          },
+          "note": "OpenAI lists gpt-5.6-sol's $4 / $20 as promotional pricing, available at least through 21 November 2026 (its model page, read 8 October 2026)."
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "o3-2025-04-16",
+      "shutdown": "2026-12-11",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08",
+      "aliasSource": "https://developers.openai.com/api/docs/models/o3"
+    },
+    {
+      "aliases": ["o3-pro"],
+      "kind": "model",
+      "announced": "2026-06-11",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-5.6-sol"],
+      "prices": [],
+      "breaks": [
+        {
+          "short": "the replacement needs reasoning.mode set to pro",
+          "text": "OpenAI's replacement is gpt-5.6-sol with reasoning.mode set to pro, not the default mode.",
+          "source": "https://developers.openai.com/api/docs/deprecations"
+        }
+      ],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "o3-pro-2025-06-10",
+      "shutdown": "2026-12-11",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "priceNote": "No price for gpt-5.6-sol with reasoning.mode pro was listed on OpenAI's pricing page when checked on 8 October 2026, so no ratio is given.",
+      "aliasSource": "https://developers.openai.com/api/docs/models/o3-pro",
+      "replacementNote": "reasoning.mode: pro"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": false,
+      "replacements": ["gemini-3.8-flash"],
+      "prices": [
+        {
+          "replacement": "gemini-3.8-flash",
+          "retiring": {
+            "input": 1.5,
+            "output": 7.5
+          },
+          "replacementPrice": {
+            "input": 1.5,
+            "output": 7.5
+          },
+          "ratio": {
+            "input": 1.0,
+            "output": 1.0
+          },
+          "note": "Agent Platform lists both models at $0.75 / $3.75 through 31 December 2026 and $1.50 / $7.50 from 1 January 2027."
+        }
+      ],
+      "breaks": [],
+      "notes": [
+        "A short-term availability model: Google posts a fixed retirement date at least 45 days ahead.",
+        "On the Gemini API (ai.google.dev) the same model ID had no shutdown date announced when checked on 8 October 2026."
+      ],
+      "seen": "2026-10-08",
+      "provider": "vertex-ai",
+      "id": "gemini-3.7-flash",
+      "shutdown": "2027-01-28",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/model-versions",
+      "pricingSource": "https://cloud.google.com/gemini-enterprise-agent-platform/generative-ai/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-10-01",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-6-sol"],
+      "prices": [
+        {
+          "replacement": "gpt-6-sol",
+          "retiring": {
+            "input": 1.25,
+            "output": 10
+          },
+          "replacementPrice": {
+            "input": 2,
+            "output": 10
+          },
+          "ratio": {
+            "input": 1.6,
+            "output": 1.0
+          }
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5.1",
+      "shutdown": "2027-04-01",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-10-01",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-6-sol"],
+      "prices": [
+        {
+          "replacement": "gpt-6-sol",
+          "retiring": {
+            "input": 1.75,
+            "output": 14
+          },
+          "replacementPrice": {
+            "input": 2,
+            "output": 10
+          },
+          "ratio": {
+            "input": 1.14,
+            "output": 0.714
+          }
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5.3-codex",
+      "shutdown": "2027-04-01",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": "2026-10-01",
+      "shutdownIsEarliest": false,
+      "replacements": ["gpt-6-luna"],
+      "prices": [
+        {
+          "replacement": "gpt-6-luna",
+          "retiring": {
+            "input": 0.2,
+            "output": 1.25
+          },
+          "replacementPrice": {
+            "input": 0.1,
+            "output": 0.5
+          },
+          "ratio": {
+            "input": 0.5,
+            "output": 0.4
+          }
+        }
+      ],
+      "breaks": [],
+      "notes": [],
+      "seen": "2026-10-08",
+      "provider": "openai",
+      "id": "gpt-5.4-nano",
+      "shutdown": "2027-04-01",
+      "source": "https://developers.openai.com/api/docs/deprecations",
+      "pricingSource": "https://developers.openai.com/api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    },
+    {
+      "aliases": [],
+      "kind": "model",
+      "announced": null,
+      "shutdownIsEarliest": true,
+      "replacements": ["gemini-3.5-flash-lite"],
+      "prices": [
+        {
+          "replacement": "gemini-3.5-flash-lite",
+          "retiring": {
+            "input": 0.25,
+            "output": 1.5
+          },
+          "replacementPrice": {
+            "input": 0.3,
+            "output": 2.5
+          },
+          "ratio": {
+            "input": 1.2,
+            "output": 1.67
+          }
+        }
+      ],
+      "breaks": [],
+      "notes": [
+        "Google lists this as the earliest possible shutdown date and says it will give the exact date with advance notice."
+      ],
+      "seen": "2026-10-08",
+      "provider": "gemini-api",
+      "id": "gemini-3.1-flash-lite",
+      "shutdown": "2027-05-07",
+      "source": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "pricingSource": "https://ai.google.dev/gemini-api/docs/pricing",
+      "pricingSeen": "2026-10-08"
+    }
+  ]
+}

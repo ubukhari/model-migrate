@@ -1,0 +1,74 @@
+{
+  "name": "model-migrate",
+  "version": "0.2.0",
+  "description": "Find every LLM model ID in your code that OpenAI, Anthropic or Google is retiring: its shutdown date, the recommended replacement, the replacement's price ratio and the API changes the provider documents. No account, no keys; reads your files locally and sends nothing.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "model-migrate": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "examples/demo-app",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agentwares/model-migrate.git"
+  },
+  "homepage": "https://agentwares-agentcheck.vercel.app/models",
+  "bugs": {
+    "url": "https://github.com/agentwares/model-migrate/issues"
+  },
+  "keywords": [
+    "llm",
+    "model-deprecation",
+    "model-retirement",
+    "model-shutdown",
+    "migration",
+    "openai",
+    "anthropic",
+    "claude",
+    "gemini",
+    "vertex-ai",
+    "gpt-5",
+    "cli"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vitest run",
+    "icon": "node scripts/icon.mjs",
+    "pretest": "pnpm run build:dist",
+    "pretypecheck": "pnpm run build:dist",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "build:dist": "tsup"
+  },
+  "packageManager": "pnpm@9.15.9",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.4.1",
+    "eslint": "^10.9.1",
+    "prettier": "^3.9.6",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.69.0",
+    "vitest": "^4.1.11"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "model-migrate",
+  "version": "0.2.0",
+  "description": "Find the LLM model IDs in this codebase that OpenAI, Anthropic or Google is retiring: shutdown date, recommended replacement, price ratio and documented API breaks, from the providers' own pages. Runs npx --allow-git=root github:agentwares/model-migrate scan locally; no account, no API key, no LLM calls of its own.",
+  "author": {
+    "name": "agentwares",
+    "url": "https://github.com/agentwares"
+  },
+  "homepage": "https://agentwares-agentcheck.vercel.app/models",
+  "documentationUrl": "https://github.com/agentwares/model-migrate#readme",
+  "repository": "https://github.com/agentwares/model-migrate",
+  "privacyPolicyUrl": "https://agentwares-agentcheck.vercel.app/privacy",
+  "termsOfServiceUrl": "https://agentwares-agentcheck.vercel.app/terms",
+  "supportUrl": "https://agentwares.vercel.app/contact",
+  "license": "MIT",
+  "icon": "./.claude-plugin/icon.png",
+  "keywords": [
+    "llm",
+    "model-deprecation",
+    "model-retirement",
+    "migration",
+    "openai",
+    "claude",
+    "gemini"
+  ]
+}

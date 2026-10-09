@@ -1,0 +1,25 @@
+{
+  "name": "model-migrate",
+  "description": "model-migrate inside Claude Code: find the LLM model IDs in this codebase that OpenAI, Anthropic or Google is retiring, with the shutdown date, the recommended replacement, its price ratio and the API changes to make. Open source, no account, nothing sent about your code.",
+  "owner": {
+    "name": "agentwares",
+    "url": "https://github.com/agentwares"
+  },
+  "plugins": [
+    {
+      "name": "model-migrate",
+      "source": "./plugins/model-migrate",
+      "description": "Find retiring model IDs in this codebase and plan the change. /model-migrate:model-migrate runs `npx --allow-git=root github:agentwares/model-migrate scan` and, for each model with a shutdown date, explains the date, the provider's replacement, the price ratio and the documented API breaks, then proposes the code change for you to approve.",
+      "category": "development",
+      "tags": [
+        "llm",
+        "model-deprecation",
+        "model-retirement",
+        "migration",
+        "openai",
+        "claude",
+        "gemini"
+      ]
+    }
+  ]
+}

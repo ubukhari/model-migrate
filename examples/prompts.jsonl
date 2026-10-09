@@ -1,0 +1,4 @@
+{"id": "classify-1", "prompt": "Classify the ticket as billing, bug or other: 'I was charged twice this month.' Answer with one word."}
+{"id": "extract-1", "messages": [{"role": "system", "content": "Reply with JSON only."}, {"role": "user", "content": "Extract name and amount: 'Refund Dana Lee $42.10'"}], "expect": {"json": true, "schema": {"type": "object", "required": ["name", "amount"], "properties": {"name": {"type": "string"}, "amount": {"type": "number"}}}}}
+{"id": "tool-1", "messages": [{"role": "user", "content": "Where is order A-1029?"}], "tools": [{"name": "lookup_order", "description": "Look up an order by its id", "parameters": {"type": "object", "properties": {"order_id": {"type": "string"}}, "required": ["order_id"]}}]}
+{"id": "summary-1", "prompt": "Summarize in one sentence: the team meeting moved from Tuesday to Thursday because the venue flooded overnight."}

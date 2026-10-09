@@ -1,0 +1,5 @@
+# Synthetic example for model-migrate's tests and README.
+router:
+  default: openai/o3-mini
+  long_context: gemini-2.5-flash
+  classifier: ft:gpt-4.1-nano-2025-04-14:acme::a1b2c3
